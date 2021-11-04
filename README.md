@@ -29,14 +29,14 @@ layout of assignment page and new assignment
 
 ## Pages we worked on D1
 
-- `login.html`: login page including sign up form inside. The purpose is to create pop-up sign up form instead of individual sign up page.
+- [`login.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_1/HTML/login.html): login page including sign up form inside. The purpose is to create pop-up sign up form instead of individual sign up page.
     
-- [`studentpage.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_1/HTML/course.html): It is a home page for student portal. In this page student can can see their current, previous and future courses list. Also they can see what's due soon.
-- `grades.html`: This page will help students to check their current and previous courses grades.
-- `course.html`: This page will help students to see their course's assignments, notes and any other important information about the course.
-- `register.html`: Students can enroll and drop(delete) from a certain course. They also can search up courses by course id or name.
-- `stuffmain.html`: This is the main page for instructor portal. Instructor can see the current or previous courses they teach. They also can see important message in this page such as students assignment submissions.
-- `roster.html` : We also added a roster page that we didn't intially had in our wireframe. 
+- [`studentpage.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_1/HTML/studentpage.html): It is a home page for student portal. In this page student can can see their current, previous and future courses list. Also they can see what's due soon.
+- [`grades.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_1/HTML/grade.html): This page will help students to check their current and previous courses grades.
+- [`course.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_1/HTML/course.html): This page will help students to see their course's assignments, notes and any other important information about the course.
+- [`register.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_1/HTML/register.html): Students can enroll and drop(delete) from a certain course. They also can search up courses by course id or name.
+- [`stuffmain.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_1/HTML/stuffmain.html): This is the main page for instructor portal. Instructor can see the current or previous courses they teach. They also can see important message in this page such as students assignment submissions.
+- [`roster.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_1/HTML/roster.html) : We also added a roster page that we didn't intially had in our wireframe. 
 
 ## Connected pages for now
 
