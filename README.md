@@ -30,7 +30,8 @@ layout of assignment page and new assignment
 ## Pages we worked on D1
 
 - `login.html`: login page including sign up form inside. The purpose is to create pop-up sign up form instead of individual sign up page.
-- `studentpage.html`: It is a home page for student portal. In this page student can can see their current, previous and future courses list. Also they can see what's due soon.
+    
+- [`studentpage.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_1/HTML/course.html): It is a home page for student portal. In this page student can can see their current, previous and future courses list. Also they can see what's due soon.
 - `grades.html`: This page will help students to check their current and previous courses grades.
 - `course.html`: This page will help students to see their course's assignments, notes and any other important information about the course.
 - `register.html`: Students can enroll and drop(delete) from a certain course. They also can search up courses by course id or name.
