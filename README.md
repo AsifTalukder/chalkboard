@@ -35,10 +35,13 @@ layout of assignment page and new assignment
 - `course.html`: This page will help students to see their course's assignments, notes and any other important information about the course.
 - `register.html`: Students can enroll and drop(delete) from a certain course. They also can search up courses by course id or name.
 - `stuffmain.html`: This is the main page for instructor portal. Instructor can see the current or previous courses they teach. They also can see important message in this page such as students assignment submissions.
+- `roster.html` : We also added a roster page that we didn't intially had in our wireframe. 
 
 ## Connected pages for now
 
 Home <--> Grades <--> Register
+
+Note: we weren'table to connect our log in page with the rest as well as stuffmain.html. 
 
 ## Website link
 
