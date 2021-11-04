@@ -43,6 +43,7 @@ Home <--> Grades <--> Register
 ## Website link
 
 https://asiftalukder.github.io/Chalkboard/HTML/studentpage.html
+https://aadas39.github.io/chalkboard/HTML/studentpage.html
 
 ## Contributors
 
