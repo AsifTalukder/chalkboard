@@ -1,5 +1,7 @@
 # chalkboard
 
+## Deliverable 1
+
 ## Site map
 
 ### Student Portal
@@ -25,11 +27,25 @@ Footer stays same as Student Portal
 layout of assignment page and new assignment
 ![alt text](/images/assignment2.jpg)
 
-#### Apurbo Das
+## Pages we worked on D1
 
-I mostly tried to contribute on the site map. I also did the mobile version of wireframe and half of desktop version wireframe.
-Basically I learned how to plan out a site before starting with any coding at all. Now when I look at my wireframe and site map, I get better idea of exactly what to do.
+- `login.html`: login page including sign up form inside. The purpose is to create pop-up sign up form instead of individual sign up page.
+- `studentpage.html`: It is a home page for student portal. In this page student can can see their current, previous and future courses list. Also they can see what's due soon.
+- `grades.html`: This page will help students to check their current and previous courses grades.
+- `course.html`: This page will help students to see their course's assignments, notes and any other important information about the course.
+- `register.html`: Students can enroll and drop(delete) from a certain course. They also can search up courses by course id or name.
+- `stuffmain.html`: This is the main page for instructor portal. Instructor can see the current or previous courses they teach. They also can see important message in this page such as students assignment submissions.
 
-#### Asif Talukder
+## Connected pages for now
 
-I contributed to the wireframe and the sitemap of instructors portal. From this assignment I have learnt how to progress gradually started from minimal requirements and structure a website before get starts to coding.
+Home <--> Grades <--> Register
+
+## Website link
+
+https://asiftalukder.github.io/Chalkboard/HTML/studentpage.html
+
+## Contributors
+
+Asif Talukder
+
+Apurba Das
