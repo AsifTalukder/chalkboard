@@ -46,8 +46,8 @@ Note: we weren'table to connect our log in page with the rest as well as stuffma
 
 ## Website link
 
-https://asiftalukder.github.io/Chalkboard/HTML/studentpage.html
-https://aadas39.github.io/chalkboard/HTML/studentpage.html
+[Asif's ChalkBoard](https://asiftalukder.github.io/Chalkboard/HTML/studentpage.html)
+[Apurbo's ChalkBoard](https://aadas39.github.io/chalkboard/HTML/studentpage.html)
 
 ## Contributors
 
