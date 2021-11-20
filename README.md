@@ -36,7 +36,8 @@ layout of assignment page and new assignment
 - [`courses-int.htm`l](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_2/courses-inst.html) : This page is course manager for instructor. instructors can manage a course by assigning and grading students works from here.
 - [`register.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_2/register.html): Students can enroll and drop(delete) from a certain course. They also can search up courses by course id or name.
 - [`instructor-portal.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_2/instructor-portal.html): This is the main page for instructor portal. Instructor can see the current or previous courses they teach. They also can see important message in this page such as students assignment submissions.
-- [`roster.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_2/roaster.html) : From this page a instructor can see the students name of a particular course. And inquire their grades. -[`faculty.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_2/faculty.html) : From this page the instructor can add and delete a course. And search an existing cours
+- [`roster.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_2/roaster.html) : From this page a instructor can see the students name of a particular course. And inquire their grades. 
+- [`faculty.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_2/faculty.html) : From this page the instructor can add and delete a course. And search an existing cours
 
 ## Connected pages for now
 
