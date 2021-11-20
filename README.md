@@ -46,7 +46,7 @@ layout of assignment page and new assignment
 ## Website link
 
 - [Asif's ChalkBoard](https://asiftalukder.github.io/Chalkboard/login.html)
-- [Apurbo's ChalkBoard](https://aadas39.github.io/chalkboard/HTML/studentpage.html)
+- [Apurbo's ChalkBoard](https://aadas39.github.io/chalkboard/Deliverable_2/login.html)
 
 ## Contributors
 
