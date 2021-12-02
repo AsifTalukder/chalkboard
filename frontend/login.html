@@ -1,0 +1,375 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChalkBoard</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/favi.png"
+    />
+    <!-- Style.css file -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- font awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="bg-dark2 d-md-none d-block">
+      <div class="container-fluid">
+        <div class="row mobile-nav">
+          <div class="col-8">
+            <a href="index.html" class="nav-link">
+              <img
+                src="assets/images/logo.png"
+                alt="img"
+                class="mb-0"
+                width="70"
+              />
+            </a>
+          </div>
+          <div class="col-4 text-right">
+            <img
+              src="assets/images/toggle.png"
+              alt="img"
+              class="click mt-3"
+              width="50"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-10 col-md-9 offset-md-3 offset-lg-2" id="main">
+          <h1 class="main-title pt-4">ChalkBoard</h1>
+          <hr />
+          <div class="row">
+            <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+              <div class="card mt-4">
+                <div class="card-body">
+                  <a
+                    href=""
+                    class="float-right btn btn-outline-primary"
+                    data-toggle="modal"
+                    data-target="#registermodal"
+                    >Sign up</a
+                  >
+                  <h5 class="card-title mb-4 mt-1">Sign In</h5>
+                  <form id="login">
+                    <label>Your email</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fa fa-user"></i>
+                        </span>
+                      </div>
+                      <input
+                        name="email"
+                        id="email"
+                        class="form-control"
+                        placeholder="Email Address"
+                        type="email"
+                        required
+                      />
+                    </div>
+
+                    <label class="mt-4">Your password</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fa fa-lock"></i>
+                        </span>
+                      </div>
+                      <input
+                        id="password"
+                        name="password"
+                        class="form-control"
+                        placeholder="******"
+                        type="password"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-check-inline mt-3">
+                      <label class="form-check-label">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          checked
+                          name="optradio"
+                          value="Student"
+                        />Student
+                      </label>
+                    </div>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          name="optradio"
+                          value="Staff"
+                        />Staff
+                      </label>
+                    </div>
+                    <div class="form-group mt-3">
+                      <button type="submit" class="btn btn-primary btn-block">
+                        Login
+                      </button>
+                    </div>
+                    <div class="form-group mt-4">
+                      <a href="" class="d-block text-center"
+                        >Forgot Password?</a
+                      >
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-lg-2 col-md-3 px-1 bg-dark2 position-fixed"
+          id="sticky-sidebar"
+        >
+          <div
+            class="
+              nav
+              flex-column flex-nowrap
+              vh-100
+              overflow-auto
+              text-white
+              p-2
+              custom-nav
+            "
+          >
+            <a href="index.html" class="nav-link">
+              <img
+                src="assets/images/logo.png"
+                alt="img"
+                class="logo d-md-block d-none"
+              />
+            </a>
+            <a href="login.html" class="nav-link">
+              <i class="fa fa-user"></i>
+              Login
+            </a>
+
+            <a href="index.html" class="nav-link">
+              <i class="fa fa-cogs"></i>
+              Student Portal
+            </a>
+
+            <a href="grades.html" class="nav-link">
+              <i class="fa fa-calculator"></i>
+              Grades
+            </a>
+
+            <a href="courses.html" class="nav-link">
+              <i class="fa fa-bar-chart"></i>
+              Course
+            </a>
+
+            <a href="register.html" class="nav-link">
+              <i class="fa fa-lock"></i>
+              Register
+            </a>
+
+            <a href="instructor-portal.html" class="nav-link">
+              <i class="fa fa-database"></i>
+              Instructor Portal
+            </a>
+            <a href="roaster.html" class="nav-link">
+              <i class="fa fa-comments-o"></i>
+              Roaster
+            </a>
+
+            <a href="faculty.html" class="nav-link">
+              <i class="fa fa-user-circle"></i>
+              Faculty
+            </a>
+          </div>
+          <div class="bottom-sidebar d-md-block d-none">
+            <p>
+              <i class="fa fa fa-envelope-o"></i
+              ><a href="mailto:example@gmail.com">Email us</a>
+            </p>
+            <p>&copy;2021 - All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-light mt-5 pt-4 pb-3 d-md-none d-block">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p>
+              <i class="fa fa fa-envelope-o"></i>
+              <a href="mailto:example@gmail.com">Email Us</a>
+            </p>
+
+            <p>&copy;2021 - All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <div
+      class="modal fade"
+      id="registermodal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="card border-0">
+              <div class="card-body pb-0">
+                <form id="signup">
+                  <div class="form-group">
+                    <label>First Name</label>
+                    <input
+                      name="firstName"
+                      id="firstName"
+                      class="form-control"
+                      placeholder="First Name"
+                      type="text"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Last Name</label>
+                    <input
+                      name="lastName"
+                      id="lastName"
+                      class="form-control"
+                      placeholder="Last Name"
+                      type="text"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Your email</label>
+                    <input
+                      name="signupEmail"
+                      id="signupEmail"
+                      class="form-control"
+                      placeholder="Email"
+                      type="email"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Password</label>
+                    <input
+                      name="signupPassword"
+                      id="signupPassword"
+                      class="form-control"
+                      placeholder="*******"
+                      type="password"
+                      required
+                    />
+                  </div>
+                  <div class="form-group mt-4">
+                    <button type="submit" class="btn btn-primary btn-block">
+                      Register Now
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const signupForm = document.getElementById("signup");
+      signupForm.addEventListener("submit", signup);
+
+      async function signup(event) {
+        event.preventDefault();
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const email = document.getElementById("signupEmail").value;
+        const password = document.getElementById("signupPassword").value;
+
+        // console.log(email, password, optradio);
+
+        const result = await fetch("https://evening-beyond-02444.herokuapp.com/signup", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName,
+            lastName,
+            email,
+            password,
+          }),
+        }).then((res) => res.json());
+        alert(result.message);
+        const user = result.user;
+        location.href = "login.html";
+      }
+
+      const loginForm = document.getElementById("login");
+      loginForm.addEventListener("submit", login);
+
+      async function login(event) {
+        event.preventDefault();
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const optradio = document.querySelector(
+          'input[name="optradio"]:checked'
+        ).value;
+        // console.log(email, password, optradio);
+
+        const result = await fetch("https://evening-beyond-02444.herokuapp.com/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            password,
+            optradio,
+          }),
+        }).then((res) => res.json());
+        alert(result.message);
+        const user = result.user;
+        localStorage.setItem("User", JSON.stringify(user));
+        location.href = "index.html";
+      }
+
+      $(".click").click(function () {
+        $("#sticky-sidebar").toggle();
+      });
+    </script>
+  </body>
+</html>
