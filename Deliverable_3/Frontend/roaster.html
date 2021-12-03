@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChalkBoard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favi.png">
+    <!-- Style.css file -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- font awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <section class="bg-dark2  d-md-none d-block">
+        <div class="container-fluid">
+            <div class="row mobile-nav">
+                <div class="col-8">
+                    <a href="index.html" class="nav-link">
+                        <img src="assets/images/logo.png" alt="img" class="mb-0" width="70" />
+                    </a>
+                </div>
+                <div class="col-4 text-right">
+                    <img src="assets/images/toggle.png" alt="img" class="click mt-3" width="50" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10 col-md-9 offset-md-3 offset-lg-2" id="main">
+                <h1 class="main-title pt-4">ChalkBoard</h1>
+                <hr />
+                <h3 class="secondary-title pt-3">Roaster</h3>
+                <div class="row">
+                    <div class="input-group mb-3 mt-3 ">
+
+                        <input type="text" class="form-control" placeholder="Search a course by ID or Name" aria-label="Search a course by ID or Name" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary" type="button">SEARCH</button>
+                        </div>
+                        <div class="col-6 mb-3 text-md-left">
+                            <a href="" class="btn btn-success">
+                                All courses
+                            </a>
+                        </div>    
+                    </div>
+                    
+                    <div class="col-lg-5">
+                        <img src="assets/images/1.jpg" class="img-fluid w-100" alt="img" />
+                    </div>
+                    <div class="col-lg-7">
+
+                            <table class="table table-striped table-condensed table-responsive w-100" title="roaster">
+                                <captiont class="text-info page-link justify-content" >Internet & Web Technologies</caption>
+                                <thead class="bg-dark">
+                                    <tr>
+                                        <th class="text-white">Student Name</th>
+                                        <th class="text-white">Assignment 1</th>
+                                        <th class="text-white">Assignment 2</th>
+                                        <th class="text-white">Final Exam</th>
+                                        <th class="text-white">Class Average</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Michel Fill</td>
+                                        <td>85</td>
+                                        <td>92</td>
+                                        <td>98</td>
+                                        <td>90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jonathan Thakur</td>
+                                        <td>85</td>
+                                        <td>92</td>
+                                        <td>98</td>
+                                        <td>90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nathail Philips</td>
+                                        <td>85</td>
+                                        <td>92</td>
+                                        <td>98</td>
+                                        <td>90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Daniel Jones</td>
+                                        <td>85</td>
+                                        <td>92</td>
+                                        <td>98</td>
+                                        <td>90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Natalia Bryant</td>
+                                        <td>85</td>
+                                        <td>92</td>
+                                        <td>98</td>
+                                        <td>90</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                      
+                        <div class="row text-center mt-5">
+                            <div class="col-12">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 px-1 bg-dark2 position-fixed" id="sticky-sidebar">
+                <div class="nav flex-column flex-nowrap vh-100 overflow-auto text-white p-2 custom-nav">
+                    <a href="index.html" class="nav-link">
+                        <img src="assets/images/logo.png" alt="img" class="logo d-md-block d-none" />
+                    </a>
+                    <a href="login.html" style="display: block"
+                    id="login" class="nav-link">
+                        <i class="fa fa-user"></i>
+                        Login
+                    </a>
+
+                    <a href="index.html" class="nav-link">
+                        <i class="fa fa-cogs"></i>
+                        Student Portal
+                    </a>
+
+                    <a href="grades.html" class="nav-link">
+                        <i class="fa fa-calculator"></i>
+                        Grades
+                    </a>
+
+                    <a href="courses.html" class="nav-link">
+                        <i class="fa fa-bar-chart"></i>
+                        Course
+                    </a>
+
+                    <a href="register.html"  style="display: block"
+                    id="register" class="nav-link">
+                        <i class="fa fa-lock"></i>
+                        Register
+                    </a>
+
+                    <a href="instructor-portal.html" class="nav-link">
+                        <i class="fa fa-database"></i>
+                        Instructor Portal
+                    </a>
+                    <a href="roaster.html" class="nav-link">
+                        <i class="fa fa-comments-o"></i>
+                        Roaster
+                    </a>
+
+                    <a href="faculty.html" class="nav-link">
+                        <i class="fa fa-user-circle"></i>
+                        Faculty
+                    </a>
+                    <p
+                    onclick="handleLogout()"
+                    style="display: none; cursor: pointer"
+                    id="logout"
+                    class="nav-link"
+                  >
+                    <i class="fa fa-lock"></i>
+                    Logout
+                  </p>
+
+                </div>
+                <div class="bottom-sidebar d-md-block d-none">
+                    <p><i class="fa fa fa-envelope-o"></i><a href="mailto:example@gmail.com">Email Us</a></p>
+                    <p>&copy;2021 - All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light mt-5 pt-4 pb-3 d-md-none d-block">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p><i class="fa fa fa-envelope-o"></i> <a href="mailto:example@gmail.com">Email Us</a></p>
+
+                    <p>&copy;2021 - All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+
+const data = localStorage.getItem("User");
+      const user = JSON.parse(data);
+      // console.log(user)
+      if (user) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("register").style.display = "none";
+        document.getElementById("logout").style.display = "block";
+      }
+
+      const handleLogout = () => {
+        localStorage.clear();
+        location.reload();
+      };
+
+        $(".click").click(function () {
+            $("#sticky-sidebar").toggle();
+        });
+    </script>
+
+</body>
+</html>
