@@ -27,7 +27,7 @@
       <div class="container-fluid">
         <div class="row mobile-nav">
           <div class="col-8">
-            <a href="index.html" class="nav-link">
+            <a href="home.html" class="nav-link">
               <img
                 src="assets/images/logo.png"
                 alt="img"
@@ -152,51 +152,55 @@
               custom-nav
             "
           >
-            <a href="index.html" class="nav-link">
+            <a href="home.html" class="nav-link">
               <img
                 src="assets/images/logo.png"
                 alt="img"
                 class="logo d-md-block d-none"
               />
             </a>
-            <a href="login.html" class="nav-link">
+            <!-- <a href="login.html" class="nav-link">
               <i class="fa fa-user"></i>
               Login
-            </a>
+            </a> -->
 
-            <a href="index.html" class="nav-link">
+            <!-- <a href="home.html" class="nav-link">
               <i class="fa fa-cogs"></i>
               Student Portal
-            </a>
+            </a> -->
 
-            <a href="grades.html" class="nav-link">
+            <!-- <a href="grades.html" class="nav-link">
               <i class="fa fa-calculator"></i>
               Grades
-            </a>
+            </a> -->
 
-            <a href="courses.html" class="nav-link">
+            <!-- <a href="courses.html" class="nav-link">
               <i class="fa fa-bar-chart"></i>
               Course
-            </a>
+            </a> -->
 
-            <a href="register.html" class="nav-link">
+            <!-- <a href="register.html" class="nav-link">
               <i class="fa fa-lock"></i>
               Register
-            </a>
+            </a> -->
+            <p class="nav-link">
+              <i class="fa fa-arrow-right"></i></fas>
+              Signin or Signup to Continue
+            </p>
 
-            <a href="instructor-portal.html" class="nav-link">
+            <!-- <a href="instructor-portal.html" class="nav-link">
               <i class="fa fa-database"></i>
               Instructor Portal
             </a>
             <a href="roaster.html" class="nav-link">
               <i class="fa fa-comments-o"></i>
               Roaster
-            </a>
+            </a> -->
 
-            <a href="faculty.html" class="nav-link">
+            <!-- <a href="faculty.html" class="nav-link">
               <i class="fa fa-user-circle"></i>
               Faculty
-            </a>
+            </a> -->
           </div>
           <div class="bottom-sidebar d-md-block d-none">
             <p>
@@ -364,7 +368,12 @@
         alert(result.message);
         const user = result.user;
         localStorage.setItem("User", JSON.stringify(user));
-        location.href = "index.html";
+        console.log(result.message)
+        if(result.message === "Login Succes"){
+          location.href = "studentPortal.html";
+        }else if(result.message === "Sorry You are not a user" || "Wrong Credentials"){
+          location.href = "home.html";
+        }
       }
 
       $(".click").click(function () {
