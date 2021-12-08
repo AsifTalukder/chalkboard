@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChalkBoard</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/favi.png"
+    />
+    <!-- Style.css file -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- font awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+        p {
+            line-height: 0px;
+        }
+        #email{
+            margin-top: 20px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <section class="bg-dark2 d-md-none d-block">
+      <div class="container-fluid">
+        <div class="row mobile-nav">
+          <div class="col-8">
+            <a href="login.html" class="nav-link">
+              <img
+                src="assets/images/logo.png"
+                alt="img"
+                class="mb-0"
+                width="70"
+              />
+            </a>
+          </div>
+          <div class="col-4 text-right">
+            <img
+              src="assets/images/toggle.png"
+              alt="img"
+              class="click mt-3"
+              width="50"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-10 col-md-9 offset-md-3 offset-lg-2" id="main">
+          <h1 class="main-title pt-4">ChalkBoard</h1>
+          <hr />
+            <h3 class="mt-3 mb-5 mx-auto">Welcome To Admin Dashboard</h3> <br />
+            <div class="col-md-6" id="studentContainer"></div>
+        </div>
+        <div
+          class="col-lg-2 col-md-3 px-1 bg-dark2 position-fixed"
+          id="sticky-sidebar"
+        >
+          <div
+            class="
+              nav
+              flex-column flex-nowrap
+              vh-100
+              overflow-auto
+              text-white
+              p-2
+              custom-nav
+            "
+          >
+              <img
+                src="assets/images/logo.png"
+                alt="img"
+                class="logo d-md-block d-none mt-2"
+              />
+            <p class="nav-link">
+              <i class="fa fa-arrow-right"></i></fas>
+              Admin Dashboard
+            </p>
+            <p
+            onclick="handleLogout()"
+            style="cursor: pointer"
+            id="logout"
+            class="nav-link"
+          >
+            <i class="fa fa-lock"></i>
+            Logout
+          </p>
+          </div>
+          <div class="bottom-sidebar d-md-block d-none">
+            <p>
+              <i class="fa fa fa-envelope-o"></i
+              ><a href="mailto:example@gmail.com">Email us</a>
+            </p>
+            <p>&copy;2021 - All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-light mt-5 pt-4 pb-3 d-md-none d-block">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p>
+              <i class="fa fa fa-envelope-o"></i>
+              <a href="mailto:example@gmail.com">Email Us</a>
+            </p>
+
+            <p>&copy;2021 - All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        const data = fetch("https://evening-beyond-02444.herokuapp.com/students")
+        .then(res => res.json())
+        .then(users =>displayUser(users));
+
+        const displayUser = users => {
+            const studentsContainer = document.getElementById("studentContainer");
+            console.log("USERS", users)
+            for (let i = 0; i < users.length; i++) {
+                const user = users[i];
+                const name = user.firstName + " " + user.lastName;
+                const studentContainer = document.createElement("div")
+                const studentInfo = `
+                   <div class="card p-2 mb-3">
+                        <h5>Name: ${name}</h5>
+                        <p id="email">Email: ${user.email} </p>
+                        <p>Role : ${user.role} </p>
+                    </div>
+                `;
+                studentContainer.innerHTML = studentInfo;
+                studentsContainer.appendChild(studentContainer);
+            }
+        }
+
+        const handleLogout = () => {
+        localStorage.clear();
+        location.href = "login.html";
+      };
+
+      $(".click").click(function () {
+        $("#sticky-sidebar").toggle();
+      });
+
+    </script>
+  </body>
+</html>
