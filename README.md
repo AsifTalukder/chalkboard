@@ -1,6 +1,6 @@
 # chalkboard
 
-## Deliverable 2
+## Deliverable 3
 
 ## Site map
 
@@ -42,9 +42,9 @@ layout of assignment page and new assignment
 
 ## Connected pages
 
-- From login.html students or instructors can go to their respective pages. 
-- from index.html(Student_portal) only grades course and register pages are accessible
-- from instructor-portal.html only course manager, roaster and faculty is accessible.
+- From login.html students, instructors or admin can go to their respective pages. 
+- from index.html(Student_portal) only grades, course and register pages are accessible.
+- from instructor-portal.html only course_manager, roaster and faculty is accessible.
 
 ## Website link
 - [ChalkBoard](https://chalk-board-frontend.herokuapp.com/)
