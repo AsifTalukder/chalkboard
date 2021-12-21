@@ -1,6 +1,6 @@
 # chalkboard
 
-## Deliverable 3
+## Final Deliverable
 
 ## Site map
 
@@ -40,6 +40,14 @@ layout of assignment page and new assignment
 - [`faculty.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_2/faculty.html) : From this page the instructor can add and delete a course. And search an existing cours
 - [`admin.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_3/frontend/admin.html) : This is for the admin to go thorugh all students and instructors information.
 
+## Used platforms in Final Deliverable 
+- MongoDB as Database
+- Mongoose for quering
+- bcrypt for password hashing (we are having plain password but database keeps as hashed)
+- Node.js and Express.js (node.js framework) used for backend
+- HTML, CSS and bootstrap for the frontend
+- Heroku for hosting the website
+
 ## The task have done for D3
 
 - We used MongoDB for our database
@@ -49,9 +57,6 @@ layout of assignment page and new assignment
 - we pust some user data in our database
 - Only the admin can retrive the database from the admin portal
 - username should be unique for every user
-
-## Final
-
 - We worked on course menagement for this deliverable.
 - We added the functionlity for student to be able to see their registered courses
 - We added the functionality for student to enroll/delete a course
