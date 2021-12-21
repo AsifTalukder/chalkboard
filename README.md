@@ -45,10 +45,21 @@ layout of assignment page and new assignment
 - We used MongoDB for our database
 - we implement the sign-up, sign-in and sign-out using Node.js
 - We hosted our website on Heroku
-- We add the admin portal that we missed to add in our past deliverable
+- We added the admin portal that we missed to add in our past deliverable
 - we pust some user data in our database
 - Only the admin can retrive the database from the admin portal
 - username should be unique for every user
+
+## Final
+
+- We worked on course menagement for this deliverable.
+- We added the functionlity for student to be able to see their registered courses
+- We added the functionality for student to enroll/delete a course
+- Instructor aslo have a very similar funcionality to see the courses they are teahcing
+- Instructor also has the ability add or delete a course.
+- We also added a functionality for the instructor to approve/decline a student to their class once a student enroll
+- Instructor can also view the registered students in the roaster section.
+- changed the layout of the Admin page a little bit from the previous deliverable.
 
 ## Connected pages
 
