@@ -1,0 +1,348 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChalkBoard</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/favi.png"
+    />
+    <!-- Style.css file -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- font awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <section class="bg-dark2 d-md-none d-block">
+      <div class="container-fluid">
+        <div class="row mobile-nav">
+          <div class="col-8">
+            <a href="login.html" class="nav-link">
+              <img
+                src="assets/images/logo.png"
+                alt="img"
+                class="mb-0"
+                width="70"
+              />
+            </a>
+          </div>
+          <div class="col-4 text-right">
+            <img
+              src="assets/images/toggle.png"
+              alt="img"
+              class="click mt-3"
+              width="50"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-10 col-md-9 offset-md-3 offset-lg-2" id="main">
+          <h1 class="main-title pt-4">ChalkBoard</h1>
+          <hr />
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="jumbotron">
+                <h2>Courses</h2>
+                <hr class="my-4" />
+                <a
+                  href=""
+                  data-toggle="modal"
+                  data-target="#currentCourses"
+                  class="btn btn-danger mt-1 text-end"
+                >
+                  Current Courses
+                </a>
+                <label class="btn btn-success mt-3">Previous Courses</label>
+                <label class="btn btn-danger mt-3">Upcoming Courses</label>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="bg-dark p-1">
+              <h3 class="text-white">Course Content</h3>
+            </div>
+            <div id="courseContainer" class="row"></div>
+          </div>
+          <div class="">
+            <div class="bg-dark p-1">
+              <h3 class="text-white">Assignmet Section</h3>
+            </div>
+            <div id="assignmentContainer" class="row"></div>
+          </div>
+        </div>
+        <div
+          class="col-lg-2 col-md-3 px-1 bg-dark2 position-fixed"
+          id="sticky-sidebar"
+        >
+          <div
+            class="
+              nav
+              flex-column flex-nowrap
+              vh-100
+              overflow-auto
+              text-white
+              p-2
+              custom-nav
+            "
+          >
+            <a href="login.html" class="nav-link">
+              <img
+                src="assets/images/logo.png"
+                alt="img"
+                class="logo d-md-block d-none"
+              />
+            </a>
+
+            <div id="important" style="display: none">
+              <a href="studentPortal.html" class="nav-link">
+                <i class="fa fa-cogs"></i>
+                Student Portal
+              </a>
+
+              <a href="grades.html" class="nav-link">
+                <i class="fa fa-calculator"></i>
+                Grades
+              </a>
+              <a href="register.html" class="nav-link">
+                <i class="fa fa-lock"></i>
+                Register
+              </a>
+            </div>
+            <div id="general" style="display: block">
+              <a href="login.html" class="nav-link">
+                <i class="fa fa-user"></i>
+                Login
+              </a>
+            </div>
+
+            <p
+              onclick="handleLogout()"
+              style="display: none; cursor: pointer"
+              id="logout"
+              class="nav-link"
+            >
+              <i class="fa fa-lock"></i>
+              Logout
+            </p>
+          </div>
+          <div class="bottom-sidebar d-md-block d-none">
+            <p>
+              <i class="fa fa fa-envelope-o"></i
+              ><a href="mailto:example@gmail.com">Email Us</a>
+            </p>
+            <p>&copy;2021 - All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-light mt-5 pt-4 pb-3 d-md-none d-block">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p>
+              <i class="fa fa fa-envelope-o"></i>
+              <a href="mailto:example@gmail.com">Email Us</a>
+            </p>
+
+            <p>&copy;2021 - All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <div
+      class="modal fade"
+      id="currentCourses"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Current Courses</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="card border-0">
+              <div id="currentCoursesContainer" class="card-body pb-0"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const info = localStorage.getItem("User");
+      const user = JSON.parse(info);
+      const email = user.email;
+      if (user) {
+        document.getElementById("important").style.display = "block";
+        document.getElementById("general").style.display = "none";
+        document.getElementById("logout").style.display = "block";
+      }
+      //Fetching user specific enrolled courses
+      const data = fetch(
+        `https://evening-beyond-02444.herokuapp.com/enrollmented/${email}`
+      )
+        .then((res) => res.json())
+        .then((courses) => displayCourse(courses));
+
+      const displayCourse = (courses) => {
+        if (courses.length > 0) {
+          const coursesContainer = document.getElementById("courseContainer");
+          console.log("courses", courses);
+          for (let i = 0; i < courses.length; i++) {
+            const course = courses[i];
+            const courseTitle = course.courseTitle;
+            const courseContent = course.courseContent;
+            const courseInformation = course.courseInformation;
+
+            const courseContainer = document.createElement("div");
+            courseContainer.className = "col-lg-6";
+            const courseInfo = `
+               <div class="card p-3 m-2">
+                    <h4> ${courseTitle}</h4>
+                    <p> <span class="h6 mt-2">Course Content:</span> ${courseContent} </p>
+                    <p> <span class="h6 mt-2">Course Info:</span> ${courseInformation} </p>
+                </div>
+            `;
+            courseContainer.innerHTML = courseInfo;
+            coursesContainer.appendChild(courseContainer);
+          }
+        } else {
+          const coursesContainer = document.getElementById("courseContainer");
+          const courseContainer = document.createElement("div");
+          const courseInfo = `
+               <div class="card p-3 m-2">
+                    <h4> No Enrollment Found</h4>
+                </div>
+            `;
+          courseContainer.innerHTML = courseInfo;
+          coursesContainer.appendChild(courseContainer);
+        }
+      };
+
+      //Fetching subject specific assignment
+      const assignmentData = fetch(
+        `https://evening-beyond-02444.herokuapp.com/getAssignment`
+      )
+        .then((res) => res.json())
+        .then((assignments) => displayAssignment(assignments));
+
+      const displayAssignment = (assignments) => {
+        if (assignments.length > 0) {
+          const assignmentsContainer = document.getElementById(
+            "assignmentContainer"
+          );
+          for (let i = 0; i < assignments.length; i++) {
+            const assignment = assignments[i];
+            const courseName = assignment.course;
+            const assignmentQuestion = assignment.assignment;
+
+            const assignmentContainer = document.createElement("div");
+            assignmentContainer.className = "col-lg-4";
+            const assignmentInfo = `
+               <div class="card p-3 m-2">
+                    <h4> ${courseName}</h4>
+                    <p> <span class="h6 mt-2">Assignment:</span> ${assignmentQuestion} </p>
+                    <form  onsubmit="handleAssignment()">
+                      <textarea required></textarea> <br />
+                      <button class="btn btn-outline-dark mt-2" >Submit </button>
+                    </form>
+                </div>
+            `;
+            assignmentContainer.innerHTML = assignmentInfo;
+            assignmentsContainer.appendChild(assignmentContainer);
+          }
+        } else {
+          const coursesContainer = document.getElementById("courseContainer");
+          const courseContainer = document.createElement("div");
+          const assignmentInfo = `
+               <div class="card p-3 m-2">
+                    <h4> No Assignment Found</h4>
+                </div>
+            `;
+          courseContainer.innerHTML = assignmentInfo;
+          coursesContainer.appendChild(courseContainer);
+        }
+      };
+
+      const currentCourses = fetch(
+        `https://evening-beyond-02444.herokuapp.com/enrollmented/${email}`
+      )
+        .then((res) => res.json())
+        .then((courses) => handleCourses(courses));
+
+      const handleCourses = (courses) => {
+        if (courses.length > 0) {
+          const coursesContainer = document.getElementById(
+            "currentCoursesContainer"
+          );
+          for (let i = 0; i < courses.length; i++) {
+            const course = courses[i];
+            const courseTitle = course.courseTitle;
+
+            const courseContainer = document.createElement("div");
+
+            const courseInfo = `
+               <div class="card p-3 m-2">
+                    <h4> ${courseTitle}</h4>
+                </div>
+            `;
+            courseContainer.innerHTML = courseInfo;
+            coursesContainer.appendChild(courseContainer);
+          }
+        } else {
+          const coursesContainer = document.getElementById("courseContainer");
+          const courseContainer = document.createElement("div");
+          const courseInfo = `
+               <div class="card p-3 m-2">
+                    <h4> No Enrollment Found</h4>
+                </div>
+            `;
+          courseContainer.innerHTML = courseInfo;
+          coursesContainer.appendChild(courseContainer);
+        }
+      };
+
+      const handleAssignment = () => {
+        window.alert("Assignment Submitted");
+      };
+
+      const handleLogout = () => {
+        localStorage.clear();
+        location.href = "login.html";
+      };
+
+      $(".click").click(function () {
+        $("#sticky-sidebar").toggle();
+      });
+    </script>
+  </body>
+</html>
