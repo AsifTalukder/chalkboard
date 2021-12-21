@@ -1,6 +1,6 @@
 # chalkboard
 
-## Deliverable 3
+## Final Deliverable
 
 ## Site map
 
@@ -39,6 +39,14 @@ layout of assignment page and new assignment
 - [`roster.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_2/roaster.html) : From this page a instructor can see the students name of a particular course. And inquire their grades.
 - [`faculty.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_2/faculty.html) : From this page the instructor can add and delete a course. And search an existing cours
 - [`admin.html`](https://github.com/AsifTalukder/chalkboard/blob/main/Deliverable_3/frontend/admin.html) : This is for the admin to go thorugh all students and instructors information.
+
+## Used platforms for the Final Deliverable
+- MongoDB as database
+- Mongoose for quering
+- bcrypt for password hashing (We are giving plain password but database keeps as hashed)
+- Node.js and Express.js(node.js framework) used for backend
+- HTML, CSS and bootstrap used for front backend
+- Website hosted on Heroku
 
 ## The task have done for D3
 
