@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChalkBoard</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/favi.png"
+    />
+    <!-- Style.css file -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- font awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <section class="bg-dark2 d-md-none d-block">
+      <div class="container-fluid">
+        <div class="row mobile-nav">
+          <div class="col-8">
+            <a href="#" class="nav-link">
+              <img
+                src="assets/images/logo.png"
+                alt="img"
+                class="mb-0"
+                width="70"
+              />
+            </a>
+          </div>
+          <div class="col-4 text-right">
+            <img
+              src="assets/images/toggle.png"
+              alt="img"
+              class="click mt-3"
+              width="50"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-10 col-md-9 offset-md-3 offset-lg-2" id="main">
+          <h1 class="main-title pt-4">ChalkBoard</h1>
+          <hr />
+          <h3 class="secoendary-title pt-4">Register</h3>
+          <div class="row">
+            <div class="col-xl-6 offset-xl-3 col-md-10 offset-md-1">
+              <form>
+                <h5 class="text-center mt-4 f500 pb-2 text-info">
+                  Search a course
+                </h5>
+                <div class="input-group mb-3 mt-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search a course by ID or Name"
+                    aria-label="Search a course by ID or Name"
+                    aria-describedby="basic-addon2"
+                    value=""
+                    id="filter"
+                    onchange="handleFilter()"
+                  />
+                  <div class="input-group-append">
+                    <button class="btn btn-secondary" type="button">
+                      SEARCH
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row text-center mt-5">
+            <div class="col-md-12">
+              <div id="courseContainer" class="row mb-5"></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-lg-2 col-md-3 px-1 bg-dark2 position-fixed"
+          id="sticky-sidebar"
+        >
+          <div
+            class="
+              nav
+              flex-column flex-nowrap
+              vh-100
+              overflow-auto
+              text-white
+              p-2
+              custom-nav
+            "
+          >
+            <a href="#" class="nav-link">
+              <img
+                src="assets/images/logo.png"
+                alt="img"
+                class="logo d-md-block d-none"
+              />
+            </a>
+            <a href="studentPortal.html" class="nav-link">
+              <i class="fa fa-cogs"></i>
+              Student Portal
+            </a>
+
+            <a href="grades.html" class="nav-link">
+              <i class="fa fa-calculator"></i>
+              Grades
+            </a>
+
+            <a href="register.html" class="nav-link">
+              <i class="fa fa-lock"></i>
+              Register
+            </a>
+            <p
+              onclick="handleLogout()"
+              style="display: none; cursor: pointer"
+              id="logout"
+              class="nav-link"
+            >
+              <i class="fa fa-lock"></i>
+              Logout
+            </p>
+          </div>
+          <div class="bottom-sidebar d-md-block d-none">
+            <p>
+              <i class="fa fa fa-envelope-o"></i
+              ><a href="mailto:example@gmail.com">Email Us</a>
+            </p>
+            <p>&copy;2021 - All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-light mt-5 pt-4 pb-3 d-md-none d-block">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p>
+              <i class="fa fa fa-envelope-o"></i>
+              <a href="mailto:example@gmail.com">Email Us</a>
+            </p>
+
+            <p>&copy;2021 - All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+      const info = localStorage.getItem("User");
+      const user = JSON.parse(info);
+      const userEmail = user.email;
+      const userName = user.firstName + " " + user.lastName;
+      if (user) {
+        document.getElementById("logout").style.display = "block";
+      }
+
+      const handleLogout = () => {
+        localStorage.clear();
+        location.href = "login.html";
+      };
+
+      let filter = "";
+
+      function handleFilter() {
+        let coursesContainer = document.getElementById("courseContainer");
+        coursesContainer.innerHTML = "";
+        filter = document.getElementById("filter").value;
+        const data = fetch(`https://evening-beyond-02444.herokuapp.com/courses?search=` + filter)
+          .then((res) => res.json())
+          .then((courses) => displayCourse(courses));
+      }
+      const data = fetch(`https://evening-beyond-02444.herokuapp.com/courses?search=` + filter)
+        .then((res) => res.json())
+        .then((courses) => displayCourse(courses));
+
+      const displayCourse = (courses) => {
+        const coursesContainer = document.getElementById("courseContainer");
+        console.log("courses", courses);
+        for (let i = 0; i < courses.length; i++) {
+          const course = courses[i];
+          const courseTitle = course.courseTitle;
+          const instructor = course.instructor;
+          const instructorEmail = course.instructorEmail;
+          const roasterOfStudents = course.roasterOfStudents;
+          const description = course.description;
+          const lessonSequence = course.lessonSequence;
+          const courseContent = course.courseContent;
+          const courseInformation = course.courseInformation;
+          const courseContainer = document.createElement("div");
+          const p = document.createElement("p");
+          p.type = "button";
+          p.innerHTML = "Enroll Course";
+          p.className = "btn btn-success";
+          p.addEventListener("click", function () {
+            const result = fetch(`https://evening-beyond-02444.herokuapp.com/sendOrder`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                courseTitle,
+                userEmail,
+                userName,
+                courseContent,
+                courseInformation,
+                instructorEmail
+              }),
+            }).then((res) => res.json());
+            alert("Enrollment Request Sent");
+            // eslint-disable-next-line no-restricted-globals
+            location.reload();
+          });
+          const courseInfo = `
+               <div class="card p-3 m-2">
+                    <h4> ${courseTitle}</h4>
+                    <p >Instructors: ${instructor} </p>
+                    <p>Description : ${description} </p>
+                    <p>Lesson Sequence : ${lessonSequence} </p>
+                </div>
+            `;
+          courseContainer.innerHTML = courseInfo;
+          courseContainer.appendChild(p);
+          coursesContainer.appendChild(courseContainer);
+        }
+      };
+
+      $(".click").click(function () {
+        $("#sticky-sidebar").toggle();
+      });
+    </script>
+  </body>
+</html>

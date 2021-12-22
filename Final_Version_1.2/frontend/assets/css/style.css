@@ -1,0 +1,147 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #333;
+    overflow-y:scroll
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #222222;
+}
+
+.f500 {
+    font-weight: 500;
+}
+
+
+input {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+.btn {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+p {
+    margin-bottom: 25px;
+    line-height: 27px;
+}
+
+ul {
+    line-height: 25px;
+    color: #333;
+    font-size: 16px;
+}
+
+#sticky-sidebar {
+    z-index: 10000;
+}
+
+.main-title {
+    font-size: 30px;
+}
+
+.bg-dark2 {
+    background-color: #232324 !important;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 30px;
+}
+
+.custom-nav a {
+    color: white;
+    border-bottom: 1px solid #444444;
+}
+
+    .custom-nav a:first-child {
+        border-bottom: none;
+    }
+
+.custom-nav i {
+    margin-right: 4px;
+}
+
+.bottombar {
+    height: 20px;
+    left: 0;
+    background-color: red;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.bottom-sidebar {
+    position: fixed;
+    bottom: 0px;
+}
+
+    .bottom-sidebar p {
+        color: #eeeeee;
+        margin-bottom: 5px;
+        font-size: 13px;
+        padding-left: 15px;
+    }
+
+    .bottom-sidebar a {
+        color: #eeeeee;
+        text-decoration: none;
+    }
+
+        .bottom-sidebar a:hover {
+            color: #eeeeee;
+            text-decoration: none;
+        }
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+footer a {
+    color: #222;
+}
+
+.f16{
+    font-size:16px;
+}
+
+.f20{
+    font-size:20px
+}
+
+    footer a:hover {
+        color: #222;
+        text-decoration: none;
+    }
+
+    .modal-open .modal{
+        z-index:1000000;
+    }
+
+    .list {
+        list-style:circle !important
+    }
+
+@media(min-width:768px) {
+    .table-responsive {
+        display: table;
+    }
+}
+
+@media(max-width:767px) {
+    #sticky-sidebar {
+        display: none;
+    }
+
+    .jumbotron label{display:block}
+}
